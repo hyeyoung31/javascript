@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>변수 - 자바스크립트 기초</title>
+    <meta name="description" content="">
+    <meta name="author" content="user1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1>변수</h1>
+    <pre>
+        var 변수명 = 값; 변수 선언하면서 값을 초기화(할당), 어디에서든 사용가능, 함수내에서 지역변수, 호이스팅(끌어올려짐)
+        let 변수명 = 값; 블록범위 지역변수 선언, 동시에 값을 초기화 
+        값을 지정후 변경가능
+
+        const 변수명 = 값; 블록범위 상수 선언, 변경 불가
+    </pre>
+    <script>
+        var basicLang = "자바스크립트";
+        document.write(basicLang);
+    </script>
+    <h2>변수 타입</h2>
+    <pre>
+        기본타입: 숫자, 문자, 불리언, null, undefined. 원시데이터, 단순화 할수 없는 값.
+        참조타입:  배열, 함수, 정규표현식. 다른 여러 값으로 구성된 복합 값. 기본타입외의 모든 타입으로 객체.
+    </pre>
+    <h2>참조타입의 종류</h2>
+    <pre>
+        객체(Object): 변수와 메서드를 한 곳에 모아주는 꾸러미 같은 역할을 한다. ex) var obj = New object();
+        배열(Array):여러 개의 데이터를 원소로 가질 수 있는 데이터 집합. ex)var arr = new Array();
+        함수(Function):실행할 구문을 미리 정의해 놓고 호출하여 사용하는 실행부. ex)function sum(a,b){var c= a + b;}
+    </pre>
+    <script>
+        var mynum = 60;//숫자
+        var str = 'javasript';//문자
+        var bool = true;//불리언 값
+        var n = null; //아무런 값도 가지지 않는 값(빈값)
+        var u;   // undefined 값을 할당(저장)하지 않았을 때
+        //자료형 typeof(대상);
+    </script>
+</body>
+
+</html>

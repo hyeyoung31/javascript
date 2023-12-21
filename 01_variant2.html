@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>산술 연산자 - 자바스크립트 기초</title>
+    <meta name="description" content="">
+    <meta name="author" content="user1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1>연산자</h1>
+    <h2>산술 연산자</h2>
+    <pre>        
+        +, -, *, / 더하기, 빼기, 곱하기, 나누기 
+        + 문자 이후에 문자 또는 숫자는 이어서 붙여준다. 
+        % 나누기 연산 후 나머지 값 
+        ++ 1씩 증가 
+        -- 1씩 감소 
+        +=, -+, *=, /=, %= 연산과 동시에 값을 할당 
+    </pre>
+    <script>
+        const num1 = 100;
+        const num2 = 30;
+        console.log(num1+num2);
+        console.log(num1-num2);
+        console.log(num1*num2);
+        console.log(num1/num2);
+        console.log(num1%num2);
+    </script>
+    <h3>문자열 더하기</h3>
+    <script>
+        console.log('자바스크립트' + ' 기초');
+        console.log('자바스크립트' + 10);
+        console.log( 10 + '자바스크립트');
+        console.log( '10' + 20);
+        console.log(  20 + '10');
+
+        console.log( '10' * 20);
+        console.log( 20*'10');
+        console.log( 20-'10');
+        console.log( 20/'10');
+
+    </script>
+    <h3>증감 연산자</h3>
+    <script>
+        let i = 1;
+        //console.log(i++); // 1, i 다음에 더함//
+        //console.log(i); //2
+
+        console.log(++i);// 먼저 더함
+        console.log(i);
+
+        let x = 1;
+        console.log(x--);//1
+        console.log(x);//0
+    </script>
+    
+    <h3>복합대입연산자</h3>
+    <script>
+        let a = 10;
+        // a = a + 10;
+        a += 10;
+        console.log(a);
+        // a = a*2;
+        a*=2;
+        // a = a%3;
+        a %= 3;
+        console.log(a);
+
+    </script>
+
+
+</body>
+
+</html>
