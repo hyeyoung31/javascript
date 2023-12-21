@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>function - javascript Basic</title>
+</head>
+
+<body>
+    <h1>함수</h1>
+    <pre>
+        (입력), 할일, 출력
+        입력되는 값 = 매개변수(parameter)
+        전달되는 값 = 인수,전달인자(argument)
+    </pre>
+
+    <h2>함수의 구조</h2>
+
+    <script>
+
+    // 방법1.
+      /*function add(a,b){
+        var sum = a + b;
+        return sum;
+        // return없으면 undefined 뜸
+        // undefined는 var result; 와 같음 (값이 없는)
+    }*/
+
+    // a, b (매게변수): 중가로 범위 안에서만 쓸 수 있음
+    // 출력1)
+    // document.write(add(1838,6380));
+    // 출력2)
+    /*var result = add(1838,6380);*/
+    // 함수에 일을 시킬 때 전달되는 값: argument
+    /*document.write(result);*/
+
+    //  방법2.  document.write(sum);
+    // sum은 함수안에서만 쓸 수 있는 지역변수이기 때문에 전역변수로 바꾸준다
+    // undefined.  var sum = a+ b; 로 초기화함  // 외부 sum과 함수안 sum 전혀 다름
+     // 우리식으로 바꿀게 하는 var이 없어야함. 그러면 앞에 var sum은 아무대서도 쓰고 있지 않은 것
+    var sum;
+    function add(a,b){
+    sum = a + b; 
+}
+ var result = add(1838,392930);
+document.write(sum);
+
+    // 방법3.
+    /*var sum; //전역 변수
+    function add(a,b){
+        let sum = a + b; //지역 변수
+        return sum;
+    }
+    var result = add(1838,392930);
+    document.write(result);*/
+    </script>
+    <hr>
+    <h3>익명함수</h3>
+    <script>
+        var addNum = function(x,y){
+        var z = x+y;
+        return z;
+    }
+    console.log(addNum(10,20));
+    document.write(addNum(10,20))
+    // document.write(addNum(10,20))를 앞에 쓰면 실행x
+    // 익명함수는 이 순서로 적어줘야 함
+
+    </script>
+    <h3>즉시 실행 함수</h3>
+    <script>
+    /*방법1
+      (function(){
+        // 즉시실행
+      }());
+    방법2
+    (function(){
+    //  즉시실행
+    })();
+    */
+    var result = (function(a,b){
+      return a+b;
+    })(10,20)
+
+    document.write(result);
+    </script>
+</body>
+
+</html>

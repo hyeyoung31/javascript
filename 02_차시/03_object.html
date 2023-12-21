@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Object</title>
+</head>
+
+<body>
+    <h1>Object</h1>
+    <pre>
+     객체는 변수와 함수가 모여 만든 하나의 꾸러미
+     함수 보다 좀 더 복잡하고 정교한 데이터들을 하나의 객체에 담아 활용할 수 있다.
+     <span>객체(object) = 변수(property) + 함수(method)</span>
+    </pre>
+    <h2> 문법</h2>
+    
+     <ul>
+        <li>var(let/const) 객체명 = new object()</li>
+        <li> var 객체명 = {} (아무값 정해져있지 않은 빈 객체)</li>
+        <li>객체명, 프로퍼티명으로 객체 내 값 출력</li>
+        <li> 객체명, 프로터피명()로 객체 내 함수 실행
+        <span>document.write(s1.math);<br>
+              s1안에 math라는 변수의 값을 출력해<br>
+              document.write(s2.total());<br>
+              s2안에 total이라는 객체 안에 있는 함수를 실행해
+            </span>
+        
+        </li>
+     </ul>
+    
+    <script>
+    //  1.변수를 나열한 객체
+     var s1 = {};
+     //객체명.property명 =  값
+     s1.kor = 100;
+     s1.eng = 90;
+     s1.math = 80;
+     console.log(s1);
+     console.log(s1.math);
+
+    /* 2.객체를 만든 동시에 값을 할당
+        property+method */
+    /*  console.log(s2.total) 쓰면 값이 안나옴.
+       var add = function(a,b){
+        var sum = a+b;
+        return sum;
+       } 
+       이때 메개변수 a,b넣어 일을 시킴.
+       여기서도 total()이라고 적어줘야함*/
+    var s2 ={
+        sci:100,
+        soc:100,
+        art:90,
+        total:function(){
+            var sum = this.sci + this.soc + this.art;
+            return sum;
+        }
+    }
+    console.log(s2.total());
+
+    </script>
+</body>
+
+</html>
