@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>conditions</title>
+</head>
+
+<body>
+    <h1>조건문</h1>
+    <pre>
+        if(조건){ 
+            참일 때 할일;            
+           } else {            
+            거짓일 때 할일;            
+        }
+        0 거짓 false
+        1 참 true 
+    </pre>
+    <script>
+        var a = 10;
+        var b = 20;
+        if (a > b) {
+            document.write('a가 b보다 크다');
+        } else if (a == b) {
+            document.write('a가 b와 같다')
+        } else {
+            document.write('a가 b보다 작다')
+        }
+    </script>
+    <hr>
+    <h2>비교연산자</h2>
+    <pre>
+    < 
+    >     
+    <=    
+    >=    
+    != 같지 않다면   
+    == 같다면
+    === 타입까지 같다면
+    !==  값은 같은데 타입이 다르면
+    </pre>
+    <hr>
+    <h2>비교연산자 != </h2>
+    <script>
+        var x = '10';
+        var y = 10;
+        if (x == y) {
+            document.write('x와 y는 값이 같다.')
+        }
+        console.log(typeof (x), typeof (y));
+
+        if (x === y) {
+            document.write('x와 y는 값이 같다.');
+        }
+
+        if (x == y) {
+            if (x === y) {
+                document.write('x와 y는 값이 같고 타입도 일치.')
+            } else {
+                document.write('x와 y는 값이 같고, 타입 일치하지 않음')
+            }
+        }
+
+    </script>
+    <hr>
+    <h2>중첩 조건문</h2>
+    <pre>
+        if(조건){
+          if(조건){      
+          }
+        } else { 
+        }
+    </pre>
+    <script>
+        var a = 10;
+        var b = 20;
+
+        if (a != b) {
+            if (a > b) {
+                document.write('a가 b보다 크다');
+            } else {
+                document.write('a가 b보다 작다');
+            }
+        } else {
+            document.write('a와 b는 같다');
+        }
+    </script>
+    <h2>조건문의 축약</h2>
+    <pre>
+        if(조건){
+          참일 때 할일;
+        } else {
+          거짓일 때 할일;
+        }
+    =>하단도 가능
+        if(조건)
+         참일 때 할 일;
+        else 
+         거짓일 때 할일;
+    =>하단도 가능
+        (조건)?
+        참일 때 할일;
+        거짓일 때 할일;
+    </pre>
+    <script>
+        var a = 10;
+        var b = 20;
+        /* if(a>b){
+             document.write('a가 b보다 크다');
+         }else{
+             document.write('a가 b와 같거나 작다');
+         }*/
+        /*
+        if(a>b)
+            document.write('a가 b보다 크다');
+        else
+            document.write('a가 b와 같거나 작다');*/
+        (a > b) ?
+            document.write('a가 b보다 크다') :
+            document.write('a가 b와 같거나 작다');
+    </script>
+
+    <h2>논리연산자</h2>
+    <pre>
+
+       A && B  모두 참이면 참 반환
+       A || B  하나라도 참이면 참 반환
+
+    </pre>
+    <script>
+        var a = 10;
+        var b = 20;
+        var c = 30;
+
+        if (a < b && b > c) {
+            document.write('a가b보다 작고, b는 c보다 작다');
+        }
+        if (a < b || b > c) {
+            document.write('a가b보다 작거나, b는 c보다 작다');
+        }
+    </script>
+
+    <h2>switch</h2>
+    <pre>
+ 조건의 매칭되는 케이스가 있다면 해당 블록의 코드를 실행
+ switch(조건){
+    case a:
+    조건의 결과가 a일 때 할일;
+    break;
+    case b:
+    조건의 결과가 b일 때 할일;
+    break;
+ }
+   
+</pre>
+    <script>
+        var number = prompt('숫자를 입력해주세요',0);
+        // 뒤에 0부분 기본값
+        switch (number % 2) {
+            case 0:
+                alert('짝수');
+                break;
+            case 1:
+                alert('홀수');
+                break;
+            default:
+                alert('숫자가 아니다');
+                break;
+        }
+    </script>
+
+</body>
+
+</html>
