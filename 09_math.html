@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        border: 1px solid#000;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Math</title>
+</head>
+
+<body>
+    <h1>Math</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>함수</th>
+                <th>설명</th>
+                <th>예시</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Math.abs</td>
+                <td>숫자를 절대값(양수)으로 반환</td>
+                <td>Math.abs(-7.5); 결과: 7.5</td>
+            </tr>
+            <tr>
+                <td>Math.ceil</td>
+                <td>소수점을 무조건 올려서 반환</td>
+                <td>Math.ceil(7.1):결과:8</td>
+            </tr>
+            <tr>
+                <td>Math.floor</td>
+                <td>소수점을 무조건 내려서 반환</td>
+                <td>Math.floor(7.6):결과:7</td>
+            </tr>
+            <tr>
+                <td>Math.round</td>
+                <td>소수점을 반올림하여 반환</td>
+                <td>Math.round(7.6):결과:8<br>
+                    Math.round(7.4): 결과:7</td>
+            </tr>
+            <tr>
+                <td>Math.random</td>
+                <td>0에서 1사이의 난수를 반환</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        // Math.함수명(값)
+        // abs, ceil, floor, round, random
+        document.write(Math.abs(-7.5) + '<br>');
+        document.write(Math.ceil(7.1) + '<br>');
+        document.write(Math.floor(7.8) + '<br>');
+        document.write(Math.round(7.2) + '<br>');
+        document.write(Math.round(7.5) + '<br>');
+    </script>
+
+    <hr>
+    <h2>Math.random 난수 생성하기</h2>
+    <script>
+        //  document.write(Math.random());
+        var ranNum = Math.random() * 10;
+        var ranNum2 = Math.floor(ranNum);
+        var ranNum3 = ranNum2 % 6;
+        //  0에서 5까지의 숫자가 나오도록
+        document.write(ranNum3);
+    </script>
+
+</body>
+
+</html>
