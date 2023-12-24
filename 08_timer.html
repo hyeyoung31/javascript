@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>timer</title>
+</head>
+
+<body>
+    <h1>Timer</h1>
+    <h2>setTimeout</h2>
+    <script>
+        //시간, 소진되면 할일
+        //setTimeout(할일,시간)
+        /* setTimeout(function(){
+          alert('반갑습니다.');
+        }, 4000);*/
+        var greeting = setTimeout(function () {
+            alert('반갑습니다.');
+        }, 4000);
+
+        //clearTimeout(대상이름);
+        clearTimeout(greeting);
+    </script>
+
+    <h2>setInterval</h2>
+    <script>
+        //setInterval(할일,시간)
+        var greeting2 = setInterval(function () {
+            alert('반갑습니다.');
+        }, 4000);
+
+        //clearInterval(대상이름);
+        clearInterval(greeting2);
+    </script>
+</body>
+
+</html>
