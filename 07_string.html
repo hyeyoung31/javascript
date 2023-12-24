@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>String</title>
+</head>
+
+<body>
+    <h1>String</h1>
+    <h2>charAt</h2>
+    <script>
+        var str = "hello world";
+        //대상.charAt(인덱스번호);
+        document.write(str.charAt(4));
+    </script>
+
+    <h2>IndexOf, Search</h2>
+    <!-- 사용자가 보는 페이지가 string이라면 페이지가 어디인지 구분하고 싶을지 사용 -->
+    <script>
+        //   document.write(str.indexOf('world'));
+        //   document.write(str.search('world'));
+        //   locatoin.href
+        console.log(location.href);
+        var currentUrl = location.href;
+        document.write(currentUrl.indexOf('string'));
+        document.write(currentUrl.search('string'));
+    </script>
+
+    <h2>concat</h2>
+    <script>
+        var str2 = "welcome universe";
+        //대상.concat(대상1)
+        var str3 = str.concat(str2);
+        document.write(str3, str);
+    </script>
+
+    <h2>replace</h2>
+    <pre>원본유지</pre>
+    <script>
+        // 대상.replace('타겟','값')
+        var str4 = str2.replace('welcome', 'bye');
+        document.write(str4, str2);
+    </script>
+
+    <h2>slice</h2>
+    <script>
+        //대상.slice(start,end)
+        // end의 바로 전 번호까지를 복사함. 원본유지
+        var str5 = str2.slice(0, 7);
+        document.write(str5, str2);
+    </script>
+
+    <h2>split</h2>
+    <script>
+        var langs = 'html-css-javascript';
+        // 문자열 -> 배열 분리.split  대상.split('-');
+        var langArr = langs.split('-');
+        console.log(langArr);
+        document.write(langArr);
+    </script>
+
+    <h2>length</h2>
+    <script>
+        //  대상.length
+        document.write(str.length);
+    </script>
+
+
+</body>
+
+</html>
