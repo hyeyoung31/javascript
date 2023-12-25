@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>selector</title>
+</head>
+
+<body>
+    <h1>Selector</h1>
+    <h2 id="sub_title">태그 선택자</h2>
+    <h2>아이디 선택자</h2>
+    <div class="container">
+        <ul id="list1" class="list">
+            <li>li 1</li>
+            <li>li 2</li>
+            <li>li 3</li>
+            <li>li 4</li>
+            <li>li 5</li>
+        </ul>
+    </div>
+    <div class="container">
+        <ul id="list2" class="list">
+            <li>li 1</li>
+            <li>li 2</li>
+            <li>li 3</li>
+            <li>li 4</li>
+            <li>li 5</li>
+        </ul>
+    </div>
+    <div class="container">
+        <ul id="list3" class="list">
+            <li class="red" name="red">li 1</li>
+            <li>li 2</li>
+            <li>li 3</li>
+            <li>li 4</li>
+            <li id="list3_5">li 5</li>
+            <li>li 6</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div id="box">
+            box level1
+            <div>
+                box level2
+                <div>
+                    box level3
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil id, corporis, blanditiis quam dicta amet quidem
+        eum impedit harum consequuntur aspernatur ratione nostrum vel culpa fuga! Dolore quibusdam nisi temporibus!
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil id, corporis, blanditiis quam dicta amet quidem
+        eum impedit harum consequuntur aspernatur ratione nostrum vel culpa fuga! Dolore quibusdam nisi temporibus!
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil id, corporis, blanditiis quam dicta amet quidem
+        eum impedit harum consequuntur aspernatur ratione nostrum vel culpa fuga! Dolore quibusdam nisi temporibus!
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil id, corporis, blanditiis quam dicta amet quidem
+        eum impedit harum consequuntur aspernatur ratione nostrum vel culpa fuga! Dolore quibusdam nisi temporibus!
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil id, corporis, blanditiis quam dicta amet quidem
+        eum impedit harum consequuntur aspernatur ratione nostrum vel culpa fuga! Dolore quibusdam nisi temporibus!
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil id, corporis, blanditiis quam dicta amet quidem
+        eum impedit harum consequuntur aspernatur ratione nostrum vel culpa fuga! Dolore quibusdam nisi temporibus!
+    </p>
+    <script>
+        console.log(document);
+        //tag이름
+        //document.getElementByTagName('태그명'), 유사배열
+        //대상.style.css속성 = 값
+        var title = document.getElementsByTagName('h1');
+        console.log(title);
+        /*  title.style.color = 'red'; 쓰면 안됨
+        하나가 있지만 배열이여서 . 배열에서 요소 선택할 때는 []로 인덱스 번호 선택*/
+        title[0].style.color = 'red';
+        // subtitle 콕 찝어 레드로
+        // 아이디명
+        // document.getElementById('아이디명'), 단일요소
+        var subTT = document.getElementById('sub_title');
+        console.log(subTT);
+        subTT.style.color = 'red';
+
+        //클래스명
+        //document.getElementByClassName('클래스명');
+        var list = document.getElementsByClassName('list');
+        console.log(list);
+        list[0].style.color = 'blue';
+
+
+        //css선택자
+        //#list3 .red
+        //document.querySelector('선택자'), 단일요소
+        //document.querySelectorAll('선택자') 유사배열
+        // 여러개 들어오는 유사배열 (대가로가 있음)
+        // 대상 {text-decoration:underline;} -는 못스기 때문에 줄이고 d를 대문자로
+        var myList = document.querySelector('#list3 .red');
+        var myList2 = document.querySelectorAll('#list3 .red');
+        console.log(myList, myList2);
+        myList.style.color = 'red';
+        myList2[0].style.textDecoration = 'underline';
+
+        // #box > div > div
+        var myBox = document.querySelector('#box > div > div');
+        myBox.style.color = 'blue';
+
+        var myP = document.getElementsByTagName('p');
+        console.log(myP);
+
+        /* myP[0].style.color = 'blue';
+        myP[1].style.color = 'blue';
+        myP[2].style.color = 'blue';*/
+
+        for (var i = 0; i < myP.length; i++) {
+            myP[i].style.color = 'blue';
+        }
+    </script>
+</body>
+
+</html>
