@@ -64,13 +64,16 @@ for(var i=0; i<myParagraph.length; i++){
 var i = 0;
 while(i<myParagraph.length){
     myParagraph[i].style.backgroundColor = '#ebebeb';
+    i++;
 }
 */
 
+// do while구문
 /*
 var i = 0; 
 do {
     myParagraph[i].style.backgroundColor = '#ebebeb';
+    i++;
 }
 while(i<myParagraph.length);
 */
