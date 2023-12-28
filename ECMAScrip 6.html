@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 새로운 속성</title>
+</head>
+
+<body>
+
+    <h1>ECMAScript 6</h1>
+    <h2>Template Literal</h2>
+    <script>
+        var str1 = 'javascript';
+        var str2 = '기초';
+        var num1 = 10;
+        var num2 = 20;
+        //ES5방식
+        //var msg = '여러분은 지금' + str1 + str2 + '를 학습하고 있습니다.';
+        //ES6방식
+        var msg = `여러분은 지금${str1 + str2}를 학습하고 있습니다.`;
+        var msg2 = `여러분은 지금 ${num1 + num2}를 학습하고 있습니다.`;
+        document.write(msg);
+        document.write('<br>' + msg2);
+    </script>
+
+
+    <h2>var vs. let</h2>
+    <script>
+        //1.var은 값을 초기화함. 가변변수
+        //같은 스코프 안에서도 변수 초기화함
+        var a = 0;
+        if (true) {
+            var a = 2;
+            var a = 3;
+            a = 4;
+            console.log(a);
+        }
+        console.log(a);
+        //2. let은 블록스코프 안에서만 사용되는 변수로 let사용시 변수 충돌을 막을 수 있다. 가변변수
+        //같은 스코프 안에서는 변수 초기화 못함.
+        let b = 0;
+        if (true) {
+            let b = 2;
+            //let b = 3; 같은 스코프 내 변수 초기화 못함
+            b = 3 // 값은 변경가능  
+            console.log(b);
+        }
+        b = 4;
+        console.log(b);
+
+    </script>
+
+    <h2>const</h2>
+    <script>
+        //const는 한번 변수 잡으면 변경되면 안되는 변수를 지정
+        const c = 100;
+        /*초기화, 값 변경 불가능해 오류남
+        c =300;
+        cons c= 200;*/
+    </script>
+    <hr>
+    <h2>const 변수 값의 수정</h2>
+    <script>
+        // 1.객체 값은 변경 가능하나 객체명을 두번 쓸 수 는 없음.
+
+        const student = {
+            eng: 90,
+            kor: 100
+        }
+        student.eng = 100;
+        console.log(student.eng);
+
+        /*같은 객체명을 두번 써 오류남
+         const student = {}*/
+
+        //2. 배열 값은 변경 가능. 
+        const backengs = ['asp', 'php', 'jsp'];
+        backengs.pop(); //뒤에 값을 터드림.
+        console.log(backengs);
+    </script>
+
+    <h2>const 변수 재할당 불가능</h2>
+    <script>
+        /*오류남
+        const student = {   math:80    }*/
+    </script>
+
+
+    <h2>Arrow function 화살표 함수</h2>
+    <script>
+        /*
+         (function(){
+    
+         })();
+    
+         (function(){
+             console.log('즉시 실행 함수 실행됨.');
+         })();
+         */
+
+        (() => {
+            console.log('즉시 실행 함수 실행됨.');
+        })();
+    </script>
+
+    <hr>
+    <script>
+
+        //1.기존 문법
+        /*
+         function add(a,b){
+            return a+b;
+         }
+         document.write(add(10,20));
+         */
+
+        //2.화살표 함수로 변경할 때 변수에 할당해야함. function이 없어지면 이름이 없는 함수가 되어 일을 시킬 수 없기 때문.
+        /* var add = (a,b) =>{
+            return a+b;
+         }
+         document.write(add(10,20));*/
+
+        //3. 화살표 함수에서 중가로 생략 가능
+        var add = (a, b) => a + b;
+        document.write(add(10, 20));
+
+        //4. 매게변수가 하나일 때는 괄호 생략 가능
+
+        /*function multiply(x){
+         return x*2;
+        }
+        document.write('<br>'+multiply(5));*/
+
+
+        /*var multiply = (x) => x*2;
+         document.write('<br>'+multiply(5));*/
+
+        var multiply = x => x * 2;
+        document.write('<br>' + multiply(5));
+    </script>
+
+    <hr>
+
+    <h2>Spread Operator 전개 연산자</h2>
+    <script>
+
+        //배열에서 활용
+        var arr1 = ['one', 'two'];
+        var arr2 = ['three', 'foour']
+
+        //1.기존방법
+        //var combined = [arr1[0], arr1[1], arr2[0], arr2[1]];
+        // concat함수 사용
+        /*var combined = arr1.concat(arr2);
+        console.log(combined);*/
+
+        //스프레드 연산자
+        var combined = [...arr1, ...arr2];
+        console.log(combined);
+
+    </script>
+    <hr>
+    <script>
+        //객체에서 활용
+        var obj1 = { one: 1, two: 2, other: 0 };
+        var obj2 = { three: 3, four: 4, other: -1 };
+
+        // 1.기존 방법. 예를 들어 one이라는 프로퍼티에 obj1의 프로퍼티one의 값을 가져오는 방식
+        /*
+        var combinedobj = {
+           one:obj1.one,
+           two:obj1.two,
+           three:obj2.three,
+           four:obj2.four
+        }
+        */
+
+        //2. 스프레드 연산자 
+        var combinedobj = {
+            ...obj1,
+            ...obj2
+        }
+        console.log(combinedobj);
+    </script>
+
+</body>
+
+</html>
