@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+*,*:after,*:before {box-sizing:border-box;}
+body {background: #000;}
+#container{ width:1000px;  margin:20px auto;}
+#navi{width:300px; float:left;		}
+#navi ul{height:460px;	}
+#navi ul li{width:150px;float:left;	}
+#navi ul li img{border:3px solid #fff;	}
+#main{width:650px; float:right; margin-right:7px;}
+#main img{border:3px solid #fff;}
