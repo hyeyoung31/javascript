@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숫자,문자 변환함수</title>
+    <script>
+      const a="120px"
+      const b =parseInt(a);
+      document.write(b + "<br>"); //120
+
+      const c= Number(a); 
+      document.write(c + "<br>"); //NaN
+      const d= '10'
+      document.write(c + "<br>"); //10
+    
+      var num5 = '33.3%';
+      console.log(parseFloat(num5));//33.3
+      var num6 = 10;
+      console.log(typeof num6);//number
+      console.log(typeof String(num6)); //string
+    </script>
+</head>
+<body>
+  <pre> 
+  Number():숫자로 변환해주는 함수
+  parseInt(): 숫자와 문자가 포함되어 있을 경우 정수 부분만 숫자로 변환해 주는 함수
+  parseFloat( ): 숫자와 문자가 포함되어 있을 경우 소수 부분까지 숫자로 변환해 주는 함수.
+  string (): 문자로 바꿔주는 함수
+  </pre>
+</body>
+</html>
