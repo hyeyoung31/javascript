@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <script>
+
+        //while 구문
+        /*let value = 0;			   
+              while(value < 5){
+                 alert(value + "번째 반복");
+               value++;
+             }*/
+
+       //for 반복문
+        //for 구문
+        /*  for(let value = 0; value<5; value++){
+           alert(value+ "번째 반복")
+         }*/
+
+
+        //do while 반복문
+        let value = 0;
+        do {
+            alert(value + "번째 반복")
+            value++
+        } while (value < 5);
+    </script>
+
+
+    <script>
+        let i = 0;
+        let tot = 0;
+        while (i < 10) {
+            i++;
+            console.log(i);
+            tot += i; // tot = tot + i;   
+        }
+        document.write("TOT = " + tot);
+
+        //i = 1, tot = 0+1 =1   TOT=1
+        //i = 2, tot = 1+2 =3, TOT=3
+        //I = 3, tot = 3+3 =6  TOT=6
+        //i =4, tot = 6+4 = 10 TOT=10
+        //i =5, tot = 10+5 =15
+        //i=6, tot =15+6 =21;
+        //i=7 tot = 21+ 7 =28;
+        //i=8 tot = 28+8= 36;
+        //i=9 tot = 36+9 = 45;
+        //i= 10, tot =45+10 =55;
+    </script>
+</body>
+
+</html>
