@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested loops</title>
+</head>
+
+<body>
+    <script>
+        /*12345
+          2345
+          345
+          45
+          5
+        */
+        /* let output = '';
+            for (let i = 1; i <= 5; i++) {
+                        for (let j = i; j <= 5; j++) {
+                            output += j;
+                        }
+                        output += '\n';
+            }		
+                    alert(output);
+        */
+
+        /*
+        let output="";
+        for (let i=1; i<=5; i++){
+         for(let j=i; j<=5; j++){
+             output +=j;
+         }
+         output += '\n';
+        } 
+         alert(output);
+        */
+
+        /*54321
+          4231
+          321
+          21
+          1
+        */
+
+        let output = "";
+        for (let i = 5; i >= 1; i--) {
+            for (let j = i; j >= 1; j--) {
+                output += j;
+            }
+            output += "\n";
+        }
+        alert(output);
+
+
+    </script>
+</body>
+
+</html>
