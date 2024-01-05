@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+  <p id="name">조혜영</p>
+
+  <script>
+      document.getElementById("name").innerHTML="chohyeyoung";      
+  </script>
+
+<p id="total"></p>
+<p id="aver"></p>
+
+<script>
+    const jum1 = 80;
+          const jum2 = 100;
+          const jum3 = 90;
+    const total = jum1 + jum2 + jum3;
+    const ave = total / 3;
+    const tot = document.getElementById("total");  
+    const aver = document.getElementById("aver");
+    tot.innerHTML ="합계 = " + total;
+          aver.innerHTML ="평균 = " + ave;	   
+</script>
+
+<h2>자바스크립트 계산</h2>
+  <p id="result"></p>
+
+  <script>
+    const a=10;
+		const b=5;
+		const mul=a*b; 
+document.getElementById("result").innerHTML = a+" * "+ b+" 의 결과는 " + mul; 
+</script>
+
+
+  <div id="cost"></div>
+
+  <script>
+     let price;
+     let quantity;
+     let total2;
+     price=5000;
+     quantity=14;
+     total2 = price * quantity;
+     const el=document.getElementById("cost");
+     el.innerHTML = "$"+total2.toLocaleString();
+  </script>
+</body>
+</html>
