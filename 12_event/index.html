@@ -4,9 +4,40 @@
 <head>
   <meta charset="UTF-8">
   <title>Javascript Basic Event</title>
+  <script defer src="js/script.js"></script>
 </head>
 
 <body>
+  <h1>이벤트</h1>
+  <p>document.getElementById("target").addEventListener('click,function(){
+    //이벤트 발생시 수행할 코드 });
+  </p>
+  <ol>
+    <li>이벤트를 적용할 대상을 지정한다</li>
+    <li>이벤트 종류를 입력한다</li>
+    <li>이벤트가 발생했을 때 수행할 코드를 기술한다</li>
+  </ol>
+  <ul>
+    <li>this는 이벤트가 발생한 객체를 참조할 수 있다.</li>
+  </ul>
+  <ul>
+    <li>click: 클릭할 때</li>
+    <li>mouseover : 마우스가 특정 객체 위로 올려졌을 때
+        조금이라도 마우스가 움직이면 반복됨
+    </li>
+    <li>mouseout : 마우스가 특정 객체 밖으로 나갔을 때
+        조금이라도 마우스가 움직이면 반복됨
+    </li>
+    <li>mouseenter : 마우스가 특정 객체 안에 들어왔을 때</li>
+    <li>mouseleave : 마우스가 특정 객체에서 떠났을 때</li>
+    <li>mousedown : 마우스를 클릭했을 때</li>
+    <li>mouseup : 마우스에서 손을 뗐을 때</li>
+    <li>scroll : 문서에서 스크롤을 할 때</li>
+    <li>change : input 요소의 변동이 있을 때</li>
+    <li>focus : 링크, input등의 요소에 포커스를 얻었을 때</li>
+    <li>keydown : 키를 눌렀을 때</li>
+    <li>keyup : 키에서 손을 뗐을 때</li>
+  </ul>
   <div class="container">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid tenetur sapiente commodi aut a distinctio
       quaerat minima ducimus? Eaque ad ipsa dolorem saepe facilis in suscipit commodi minima, odio omnis.</p>
@@ -25,8 +56,6 @@
 <a href="">Link</a>
 <a href="">Link</a>
 <input type="text">
-  <script src="js/script.js"></script>
-
 
 </body>
 
