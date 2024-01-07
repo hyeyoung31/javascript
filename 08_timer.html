@@ -5,35 +5,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>timer</title>
+
 </head>
 
 <body>
     <h1>Timer</h1>
     <h2>setTimeout</h2>
+    <ul>
+        <li>할일 = 함수 = function(){}</li>
+        <li>시간은 millisecond 천분의 1초, 1000=1초</li>
+        <li>setTimeout(할일,시간)</li>
+    </ul>
     <script>
-        //시간, 소진되면 할일
-        //setTimeout(할일,시간)
         /* setTimeout(function(){
-          alert('반갑습니다.');
-        }, 4000);*/
-        var greeting = setTimeout(function () {
+             alert('반갑습니다.');
+         },4000);*/
+
+    </script>
+
+    <h2>clearTimeout</h2>
+    <ul>
+        <li>setTimeout함수로 지정한 할 일을 멈춰야 할 때 사용</li>
+        <li>멈추려는 대상의 이름을 매개변수로 지정한다</li>
+        <li>clearTimeout(대상);</li>
+        <li>이때 setTimeout함수는 이름이 없는 함수이기 때문에, 변수에 할당해 이름을 지정한다</li>
+    </ul>
+
+    <script>
+        var timer = setTimeout(function () {
             alert('반갑습니다.');
         }, 4000);
 
-        //clearTimeout(대상이름);
-        clearTimeout(greeting);
+        clearTimeout(timer);
+
     </script>
 
     <h2>setInterval</h2>
+    <ul>
+        <li>일정 시간마다 반복적으로 지정한 코드를 실행할 수 있다.</li>
+        <li>웹페이지 슬라이드 넘어갈 때 활용</li>
+    </ul>
     <script>
-        //setInterval(할일,시간)
-        var greeting2 = setInterval(function () {
+        /* setInterval(function(){
+           alert('반갑습니다.');
+         },4000);*/
+    </script>
+
+    <h2>clearInterval</h2>
+    <ul>
+        <li>멈추려는 대상의 이름을 매개변수로 지정한다</li>
+        <li>clearInterval(대상);</li>
+        <li>이때 setInterval 함수는 이름이 없는 함수이기 때문에, 변수에 할당해 이름을 지정한다</li>
+    </ul>
+
+    <script>
+        var interval = setInterval(function () {
             alert('반갑습니다.');
         }, 4000);
 
-        //clearInterval(대상이름);
-        clearInterval(greeting2);
+        clearInterval(interval);
     </script>
 </body>
-
-</html>
