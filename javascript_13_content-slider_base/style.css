@@ -1,0 +1,98 @@
+/* General styles */
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialised;
+}
+
+body {
+    margin-top: 5em;
+    font: 20px/1.5 "Helvetica", Arial, sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 100%;	
+	overflow: hidden;	
+    /* 가로스크롤 없앰. overflow-hidden은 멀까? */
+}
+
+.slider-container {
+    position: absolute;
+    /* 애가 움직여도 움직인거를 모르게 하려면 absolute */
+	width:100%;
+}
+
+.slide {
+	position: absolute;
+	width: 100%;
+    /* 분모가 만든 공간에서 너비를 다쓴다 */
+	padding:0 10%;
+    /* width 있는 상태에서 패딩을 주면 넓이가 늘어나니까 박스사이징 */
+	box-sizing:border-box;
+	top: 50%;
+	transform: translateY(-50%);
+    /* 슬라이드 높이가 달라도 가운데 있어야 하니까.
+     top50으로 가운데 시작점에 왔을 때, 자기 몸의 반만큼 다시 올라와 가운데  */
+	text-align: center;
+	overflow: hidden;
+    /* 혹시 넘치는 요소가 있다면 가리기 */
+}   
+
+.slider-container.animated {
+	-webkit-transition: left .3s ease-in;
+	transition: left .3s ease-in;
+    /* 움직이는 과정이 보여야해서 */
+}
+
+blockquote {
+    color: #636363;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 1.5em;
+}
+
+cite {
+    font-size: .75em;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Utility */
+.simple-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Nav */
+#prev,
+#next {
+    position: absolute;
+    top: 50%;
+	left:50%;
+    /* 가운데 겹쳐 놓음. margin으로 움직임 */
+    transform: translateY(-50%);
+    z-index: 999999;
+    display: inline-block;
+    height: 5em;
+    width: 5em;
+    border-radius: 50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+}
+
+#prev.disabled, #next.disabled { display:none;}
+
+#prev { background-image: url('arrow-left-out.svg'); margin-left:-480px;}
+
+#prev:hover { background-image: url('arrow-left-over.svg'); }
+
+#next {
+    margin-left:380px;
+    background-image: url('arrow-right-out.svg');
+	
+}
+
+#next:hover { background-image: url('arrow-right-over.svg'); }
