@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+    
+</head>
+<body>
+<h1 class="product-title">샌들</h1>
+<div class="p_table">
+ <form name="form1">
+  <table>
+    <tbody>
+      <tr>
+        <del>100,000원</del> 
+        <!-- hidden -> 사용자에게는 보이지 않는 숨겨진 입력 필드  
+             서버상으로 화면에서의 내용을 숨겨서 보내야할 때 자주 사용 -->
+		<input type="hidden" name="price" value="100000">
+      </tr>  
+      <tr>
+			<th>할인(된)금액</th>
+			<td>
+			   <span><b>50,000원</b></span>
+			   <input type="hidden" name="discounted" value="50000">
+			</td>
+		</tr>   
+    <tr>
+        <th>색상선택</th>
+        <td>
+         <span>
+            <select name="color">
+              <option value="">--옵션 선택--</option>
+              <option value="0">white</option>
+              <option value="1">pink</option>
+              <option value="2">black</option>
+            </select>
+         </span>
+        </td>  
+    </tr>
+    <tr>
+        <th>제품선택 </th>
+        <td>
+         <span>
+         <select name="size" >
+                    <option value="">--옵션 선택--</option>
+                    <option value="225">225</option>
+                    <option value="230">230</option>
+                    <option value="235">235</option>	
+                    <option value="240">240</option>	
+                    <option value="245">245</option>		
+                    <option value="250">250</option>			  
+                </select>
+         </span>
+        </td>   
+    </tr>
+    <tr>
+        <th>옵션추가 </th>
+        <td>
+        <span>
+         <select name="add" id="add" onchange="checkPrice()">
+         <option value="">--옵션 추가--</option>
+         <option value="0">옵션0</option>
+         <option value="1000">옵션1</option>		 
+         <option value="2000">옵션2</option>				 
+         </select>
+        </span>
+        </td>  
+    </tr>
+    <tr>
+        <td class="product-value" colspan="2">
+          <span>총 상품 금액</span>
+          <input type="text" name="total" value="0" class="txt" readonly>		
+          <span>원</span>
+        </td>
+    </tr> 
+    </tbody>
+  </table>
+ </form>
+</div>
+
+<script>
+let fm;
+fm = document.forms["form1"];
+fm["total"].value=fm["discounted"].value;
+
+function  checkPrice(){
+fm["total"].value = Number(fm["discounted"].value) + Number(fm["add"].value);
+}
+</script>   
+</body>
+</html>
