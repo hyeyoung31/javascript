@@ -92,3 +92,17 @@ function updateNav(){
 goToSlide(0);
 
 */
+
+//자동 슬라이드
+//4초마다 goToSlide(숫자); 0, 1,2, 3,...5,0 
+//setInterval(할일,시간);
+//함수 = 할일 = function() {실제할일}
+// 실제 할일 = goToSlide(숫자); 0,1,2,3,..5,0
+
+ var timer = setInterval(function(){
+  //goToSlide(숫자); 0, 1,2, 3,...5,0
+  // ci 0 4초 ni 1, ci 1 4ch ni 2....ci 5 4초 ni 0
+  var nextIdx = (currentIndex + 1) % slideCount; //나눈 나머지
+
+  goToSlide(nextIdx);
+},4000);
