@@ -20,6 +20,7 @@ body {
     position: absolute;
     /* 애가 움직여도 움직인거를 모르게 하려면 absolute */
 	width:100%;
+	left:0;
 }
 
 .slide {
