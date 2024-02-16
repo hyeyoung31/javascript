@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+	
+</head>
+<body onload="init();">
+    <form name="form" method="get">
+        수량 : <input type="hidden" name="sell_price" value="5500">
+        <input type="text" name="amount" value="1" size="3">
+        <input type="button" value=" + " onclick="add();">
+        <input type="button" value=" - " onclick="del();"><br>
+        금액 : <input type="text" name="sum" size="11" readonly>원
+    </form>
+<script>
+ let sell_price;
+ let amount;
+  function init(){
+        sell_price = document.form.sell_price.value;  
+        document.form.sum.value = sell_price;
+     }	
+  function add() {
+			const hm = document.form.amount;
+			const sum = document.form.sum;
+			hm.value++;
+			sum.value = parseInt(hm.value) * sell_price;
+          //sum.value = Number(hm.value) * sell_price;  
+	}  
+    function del () {
+            hm = document.form.amount;
+            sum = document.form.sum;
+			if(hm.value > 1) {
+                    hm.value-- ;
+                   sum.value = parseInt(hm.value) * sell_price;
+				  // sum.value = Number(hm.value) * sell_price;
+             }   
+            }   
+</script>   
+</body>
+</html>
