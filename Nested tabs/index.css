@@ -1,0 +1,81 @@
+body {
+    background-image: linear-gradient(19deg, #ff8a00 0%, #7b4302 100%);
+    background-repeat: no-repeat;
+    font: 400 16px/1.5em "Open Sans", sans-serif;
+  }
+  
+  .page-content {
+    max-width: 700px;
+    margin: 32px auto;
+    padding: 32px;
+    background: #fff;
+    min-height: 100vh;
+  }
+  
+  [data-tab-content] {
+    display: none;
+  }
+  
+  .active[data-tab-content] {
+    display: block;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .tab {
+    flex: 1;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 10px;
+    color: #cdcdcd;
+    border-bottom: 1px solid #cdcdcd;
+  }
+  
+  .tab.active {
+    color: #1babf9;
+    border-bottom: 2px solid #5a5c5d;
+  }
+  
+  .tab-li {
+    flex: 1;
+    margin-bottom: 0;
+  }
+  
+  .tab-li a {
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 10px 0;
+    color: #cdcdcd;
+    border-bottom: 2px solid #cdcdcd;
+    margin-bottom: 0.4rem;
+    width: 100%;
+    display: block;
+  }
+  
+  .tab-li a.active {
+    color: #1babf9;
+    border-bottom: 2px solid #1babf9;
+  }
+  
+  .tab-li a {
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 10px;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    display: block;
+  }
+  
