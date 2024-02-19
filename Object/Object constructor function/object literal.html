@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 리터럴</title>
+    <script>
+      var info = {
+        subject:'css',
+        credit:1,
+        printOut: function() {
+            return this.subject + ',' + this.credit + '학점';
+        }
+      };
+      console.log(info.subject); //css
+      console.log(info.credit) ; //1
+      console.log(info.printOut()); //css,1학점
+    
+    //갹채 리터럴의 속성 추가, 삭제, 변경 방법
+    info.days =20;
+    delete info.credit;
+    info.printOut = function() { //속성변경
+      return this.subject + ',' + this.days +'일';
+    };
+    </script>
+</head>
+<body>
+<pre>
+var 변수 = {
+  프로퍼티: 값,
+  프로퍼티: 값,
+  메서드: function() {
+  },
+  ...
+};
+console.log(변수, 프로퍼티);
+console.log(변수, 매서드());
+</pre>
+</body>
+</html>

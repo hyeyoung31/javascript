@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 생성자 함수</title>
+
+<script>
+ function Info(subject, credit) {
+    this.subject = subject;
+    this.credit = credit;
+    this.printOut = function(){
+        return this.subject + ',' + this.credit +'학점';
+    };
+ };
+ var sub1 = new Info('html',1);
+ console.log(sub1.subject); //html
+ console.log(sub1.credit); //1
+ console.log(sub1.printOut()); //html,1학점
+ sub1.days = 20; //속성추가                                                                                                                                                                         
+ console.log(sub1.days); //20
+ delete sub1.credit; //속성제거
+ console.log(sub1.credit); //undefined
+ sub1.printOut = function(){ //속성변경
+  return this.subject + ',' + this.days + '일';
+}
+console.log(sub1.printOut()); //html,20일
+
+
+var sub2 = new Info('css',2);
+console.log(sub2.subject); //css
+console.log(sub2.credit); //2
+console.log(sub2.printOut()); //css,2학점
+console.log(sub2.days); //undefined
+console.log(sub2.credit); //2
+console.log(sub2.printOut()); // css,2학점
+</script>
+</head>
+<body>
+<pre>
+function 함수(매개 변수1, 매개 변수2) {
+    this.프로퍼티 = 매개 변수1;
+    this.프로퍼티 = 매개 변수2;
+    this.매서드 = function (){      
+    };
+}
+var 변수 = new 함수(매개 변수1 값, 매개 변수2 값);
+
+'생성자 함수'로 생성된 객체의 속성 추가나 삭제, 변경은 다른 객체의 속성에는 영향을 주지 않는다.
+</pre>
+</body>
+</html>
