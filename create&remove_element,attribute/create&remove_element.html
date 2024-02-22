@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position:fixed;
+            left: 100px;
+            top: 10px;
+            width: 200px;
+            height: 200px;
+            background: #718c00;
+        }
+    </style>
+    <script>
+        /* HTML 요소를 취득할 때는 순서상 '취득할 요소'가 '요소 취득 명령어' 전에 있어야함. 
+           '취득할 요소'가 '요소 취득 명령어' 이후에 오면 반드시 load 이벤트를 적용해야 함 */
+        
+        window.onload = function () {
+           var popup = document.getElementById('popup');
+           popup.removeChild(popup.firstChild);//'내용' 텍스트를 삭제
+            };
+            
+
+        function createEle() {
+            var bt = document.getElementById('bt');
+            function popup() {
+                var div = document.createElement('div');
+                var p = document.createElement('p');
+                var txt = document.createTextNode('자바스크립트');
+                p.appendChild(txt);
+                div.appendChild(p);
+                document.body.appendChild(div);
+            }
+            bt.onclick = popup;
+            // 기본 이벤트 모델로 다른 함수를 호출 때는 함수에 ()를 붙이지 않음. 만약 붙이면 웹페이지가 실행되었을 때 요소를 클릭하지 않아도 한번 실행됨(강제실행)
+        }
+        addEventListener('load', createEle);
+
+        
+    </script>
+</head>
+<body>
+  <button id="bt">요소생성</button>
+  <div id="popup">내용</div>
+  <!-- <script>
+     var popup = document.getElementById('popup');
+     popup.removeChild(popup.firstChild); //'내용' 텍스트를 삭제
+  </script> -->
+</body>
+</html>
