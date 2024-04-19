@@ -1,0 +1,15 @@
+.bbs {  width: 260px;  border: 2px solid #ccc;  background: #ffc;
+        padding: 10px;  font-size: 0.75rem;  margin: 10px;}
+.bbs h2 {  color: #36F; margin-bottom: 10px;  float: left;}
+.bbs ul {  clear: both;}
+
+.bbs ul li {  height: 18px;  padding-left: 10px;
+              background: url(../image/bg_dotted.gif) no-repeat 0 5px;}
+
+.bbs ul li a {  color: #666;  text-decoration: none;}
+
+.bbs ul li a:hover {  text-decoration: underline;  color: #309;}
+.bbs p {  float: right;  margin: 5px 5px 0 0;}
+
+.bbs p a {  text-decoration: none;  color: #333;}
+.bbs p a:hover {  color: #F30;}/*# sourceMappingURL=float_bbs.css.map */
